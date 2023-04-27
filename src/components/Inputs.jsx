@@ -5,7 +5,8 @@ const InputsContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
+  padding: 1.5rem 1rem;
 `
 
 const BillContainer = styled.section`
@@ -19,6 +20,7 @@ const TipContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
 `
 
 const TipButton = styled.button`
@@ -27,7 +29,7 @@ const TipButton = styled.button`
 `
 
 const TipInput = styled.input`
-  
+  width: 100%;
 `
 
 const PeopleContainer = styled.section`
