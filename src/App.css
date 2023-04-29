@@ -3,15 +3,3 @@
   margin: 0;
   padding: 0;
 }
-
-.app--container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 80%;
-  margin: auto;
-  border: solid 2px pink;
-}
-
-.app--bill-input {
-  width: 100%;
-}

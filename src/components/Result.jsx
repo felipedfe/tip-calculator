@@ -1,52 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import {
+  ResultContainer,
+  TipAmountContainer,
+  TotalContainer,
+  BackGround,
+  Label,
+  Value,
+  ResetButton
+} from '../styled/Result.styled.js';
 
-const ResultContainer = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  /* gap: 2rem; */
-  padding: 1.5rem 1rem;
-  background-color: #eedc82;
-`
+function Result(props) {
+  const { tipAmount, total } = props;
 
-const TipAmountContainer = styled.section`
-  position: relative;
-  display: flex;
-`
-
-const TotalContainer = styled.section`
-  position: relative;
-  display: flex;
-`
-
-const BackGround = styled.div`
-  position: relative;
-  height: 100%;
-  background-color: #00c96b;
-  /* padding-top: 2rem; */
-`
-
-const Label = styled.label`
-  &::after {
-    display: block;
-    content: "/ person";
-    color: red;
-  }
-`
-
-const Value = styled.span`
-  position: absolute;
-  right: 0;
-`
-
-const ResetButton = styled.button`
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-`
-
-function Result() {
   return (
     <ResultContainer>
       <BackGround>
@@ -54,14 +19,18 @@ function Result() {
           <Label>
             Tip Amount
           </Label>
-          <Value>0.00</Value>
+          <Value>
+            {tipAmount.toFixed(2)}
+          </Value>
         </TipAmountContainer>
 
         <TotalContainer>
           <Label>
             Total
           </Label>
-          <Value>0.00</Value>
+          <Value>
+            {total.toFixed(2)}
+          </Value>
         </TotalContainer>
 
         <ResetButton>

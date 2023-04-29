@@ -1,34 +1,40 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import Inputs from './components/Inputs';
 import Result from './components/Result';
+import { Main, Title, AppContainer } from './styled/App.styled.js';
 import './App.css';
 
-const Main = styled.main`
-
-`
-
-const Title = styled.h1`
-
-`
-
-const AppContainer = styled.section`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  /* column-gap: 1.5rem; */
-  width: 80%;
-  margin: auto;
-  border: solid 2px pink;
-  /* padding: 1.5rem; */
-`
-
 function App() {
+  const [bill, setBill] = useState("");
+  const [percentage, setPercentage] = useState("");
+  const [people, setPeople] = useState("");
+  const [activeButton, setActiveButton] = useState("");
+  const [customInput, setCustomInput] = useState("");
+  const [tipAmount, setTipAmount] = useState(0);
+  const [total, setTotal] = useState(0);
+
   return (
     <Main>
       <Title>SPLITER</Title>
       <AppContainer>
-        <Inputs />
-        <Result />
+        <Inputs
+          bill={bill}
+          setBill={setBill}
+          percentage={percentage}
+          setPercentage={setPercentage}
+          people={people}
+          setPeople={setPeople}
+          activeButton={activeButton}
+          customInput={customInput}
+          setCustomInput={setCustomInput}
+          setActiveButton={setActiveButton}
+          setTipAmount={setTipAmount}
+          setTotal={setTotal}
+        />
+        <Result
+          tipAmount={tipAmount}
+          total={total}
+        />
       </AppContainer>
     </Main>
   );
