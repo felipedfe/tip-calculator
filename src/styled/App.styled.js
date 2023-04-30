@@ -3,20 +3,19 @@ import styled from 'styled-components';
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-  /* width: 100%; */
-  /* transition: translateY(50%); */
   padding-top: 5%;
   height: 100vh;
+
+  @media all and (min-width: 1800px) {
+    padding-top: 10%;
+  }
 `
 
 export const Title = styled.h1`
   text-align: center;
   padding-bottom: 1.5rem;
+  color: var(--color-primary);
 `
 
 export const AppContainer = styled.section`
@@ -27,5 +26,20 @@ export const AppContainer = styled.section`
   /* margin: auto; */
   border-radius: 10px;
   background-color: #fff;
+  
+  @media all and (max-width: 767px) {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+
+  @media all and (min-width: 768px) {
+    /* grid-template-columns: 100%; */
+    width: 85%;
+  }
+  
+  @media all and (min-width: 1024px) {
+    /* grid-template-columns: 100%; */
+    width: 65%;
+  }
 
 `

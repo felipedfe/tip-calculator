@@ -4,39 +4,40 @@ export const ResultContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 1rem;
-  /* min-height: 400px; */
-  /* background-color: #eedc82; */
-`
-
-export const TipAmountContainer = styled.section`
-  position: relative;
-  display: flex;
-`
-
-export const TotalContainer = styled.section`
-  position: relative;
-  display: flex;
+  padding: 1.5rem;
 `
 
 export const BackGround = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
   height: 100%;
-  background-color: var(--color-primary);
   padding: 1.5rem 1rem;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+`
+
+export const TipAmountContainer = styled.section`
+  position: relative;
+  display: flex;
+  align-items: center;
+`
+
+export const TotalContainer = styled.section`
+  position: relative;
+  display: flex;
+  align-items: center;
 `
 
 export const Label = styled.label`
   &::after {
     display: block;
     content: "/ person";
-    color: gray;
+    color: var(--color-secondary);
   }
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
 `
 
 export const Value = styled.span`
@@ -45,6 +46,9 @@ export const Value = styled.span`
   }
   position: absolute;
   right: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-display);
 `
 
 export const ResetButton = styled.button`

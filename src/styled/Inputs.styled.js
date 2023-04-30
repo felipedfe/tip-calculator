@@ -4,8 +4,8 @@ export const InputsContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 1.5rem 1rem;
+  gap: 2rem;
+  padding: 1.5rem 1rem 1.5rem 2rem;
   /* background-color: #fff; */
   /* overflow: hidden; */
 `
@@ -19,7 +19,11 @@ export const BillInput = styled.input`
   margin-top: 0.5rem;
 `
 
-export const TipContainer = styled.section`
+export const TipContainer = styled.div`
+  width: 100%;
+`
+
+export const TipGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);

@@ -5,6 +5,7 @@ import {
   BillContainer,
   BillInput,
   TipContainer,
+  TipGrid,
   TipInput,
   PeopleContainer,
   PeopleInput,
@@ -65,8 +66,9 @@ function Inputs(props) {
           />
         </label>
       </BillContainer>
-      <label>Select Tip %
-        <TipContainer>
+      <TipContainer>
+        <span>Select Tip %</span>
+        <TipGrid>
           <TipButton
             activeButton={activeButton}
             setActiveButton={setActiveButton}
@@ -113,8 +115,8 @@ function Inputs(props) {
             value={customInput}
             onChange={handleCustomInput}
           />
-        </TipContainer>
-      </label>
+        </TipGrid>
+      </TipContainer>
       <PeopleContainer>
         <label>Number of People
           <PeopleInput
