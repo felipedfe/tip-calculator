@@ -4,9 +4,9 @@ export const ResultContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* gap: 2rem; */
   padding: 1.5rem 1rem;
-  background-color: #eedc82;
+  /* min-height: 400px; */
+  /* background-color: #eedc82; */
 `
 
 export const TipAmountContainer = styled.section`
@@ -20,27 +20,45 @@ export const TotalContainer = styled.section`
 `
 
 export const BackGround = styled.div`
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
   height: 100%;
-  background-color: #00c96b;
-  /* padding-top: 2rem; */
+  background-color: var(--color-primary);
+  padding: 1.5rem 1rem;
 `
 
 export const Label = styled.label`
   &::after {
     display: block;
     content: "/ person";
-    color: red;
+    color: gray;
   }
+  color: #fff;
+  font-weight: 600;
 `
 
 export const Value = styled.span`
+  &:before {
+    content: '$';
+  }
   position: absolute;
   right: 0;
 `
 
 export const ResetButton = styled.button`
-  position: absolute;
+  &:hover {
+    background-color: var(--color-display);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
   width: 100%;
-  bottom: 0;
+  margin-top: auto;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: var(--color-secondary);
+  transition: background-color 0.3s;
 `

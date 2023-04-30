@@ -2,10 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledTipButton = styled.button`
-background-color: ${(props) => props.active === props.text ? 'green' : 'gray'}
+  color: ${(props) => props.active === props.text ?
+    '#000' :
+    '#fff'
+  };
+  background-color: ${(props) => props.active === props.text ?
+    'var(--color-display)' :
+    'var(--color-primary)'
+  };
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem 0;
+/* background-color: var(--color-primary); */
 `
 
-function TipButton({ setPercentage, activeButton, setActiveButton, text, value, setCustomInput }) {
+function TipButton(props) {
+  const {
+    setPercentage,
+    activeButton,
+    setActiveButton,
+    text,
+    value,
+    setCustomInput
+  } = props;
 
   const handleClick = ({ target }) => {
     setPercentage(+target.value);

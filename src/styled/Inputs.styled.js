@@ -6,13 +6,17 @@ export const InputsContainer = styled.section`
   flex-direction: column;
   gap: 3rem;
   padding: 1.5rem 1rem;
+  /* background-color: #fff; */
+  /* overflow: hidden; */
 `
 
 export const BillContainer = styled.section`
+  /* padding-top: 3rem; */
 `
 
 export const BillInput = styled.input`
   width: 100%;
+  margin-top: 0.5rem;
 `
 
 export const TipContainer = styled.section`
@@ -20,6 +24,7 @@ export const TipContainer = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 0.5rem;
+  margin-top: 0.5rem;
 `
 
 export const TipButton = styled.button`
@@ -29,6 +34,7 @@ export const TipButton = styled.button`
 
 export const TipInput = styled.input`
   width: 100%;
+  height: 100%;
 `
 
 export const PeopleContainer = styled.section`
@@ -38,4 +44,5 @@ export const PeopleContainer = styled.section`
 
 export const PeopleInput = styled.input`
   width: 100%;
+  margin-top: 0.5rem;
 `

@@ -10,7 +10,21 @@ import {
 } from '../styled/Result.styled.js';
 
 function Result(props) {
-  const { tipAmount, total } = props;
+  const { tipAmount,
+    total,
+    setBill,
+    setActiveButton,
+    setPercentage,
+    setPeople,
+    setCustomInput } = props;
+
+  const handleClick = () => {
+    setBill(0);
+    setActiveButton(0);
+    setPeople(0);
+    setPercentage(0);
+    setCustomInput("");
+  };
 
   return (
     <ResultContainer>
@@ -33,7 +47,10 @@ function Result(props) {
           </Value>
         </TotalContainer>
 
-        <ResetButton>
+        <ResetButton
+          type="button"
+          onClick={handleClick}
+        >
           RESET
         </ResetButton>
       </BackGround>

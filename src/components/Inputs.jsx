@@ -60,70 +60,72 @@ function Inputs(props) {
           <BillInput
             type="number"
             placeholder="0"
-            value={bill ? bill : null}
+            value={bill ? bill : ""}
             onChange={({ target }) => setBill(+target.value)}
           />
         </label>
       </BillContainer>
-      <TipContainer>
-        <TipButton
-          activeButton={activeButton}
-          setActiveButton={setActiveButton}
-          setPercentage={setPercentage}
-          setCustomInput={setCustomInput}
-          value={0.05}
-          text="5%"
-        />
-        <TipButton
-          activeButton={activeButton}
-          setActiveButton={setActiveButton}
-          setPercentage={setPercentage}
-          setCustomInput={setCustomInput}
-          value={0.1}
-          text="10%"
-        />
-        <TipButton
-          activeButton={activeButton}
-          setActiveButton={setActiveButton}
-          setPercentage={setPercentage}
-          setCustomInput={setCustomInput}
-          value={0.15}
-          text="15%"
-        />
-        <TipButton
-          activeButton={activeButton}
-          setActiveButton={setActiveButton}
-          setPercentage={setPercentage}
-          setCustomInput={setCustomInput}
-          value={0.25}
-          text="25%"
-        />
-        <TipButton
-          activeButton={activeButton}
-          setActiveButton={setActiveButton}
-          setPercentage={setPercentage}
-          setCustomInput={setCustomInput}
-          value={0.5}
-          text="50%"
-        />
-        <TipInput
-          type="number"
-          placeholder="Custom"
-          value={customInput}
-          onChange={handleCustomInput}
-        />
-      </TipContainer>
+      <label>Select Tip %
+        <TipContainer>
+          <TipButton
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+            setPercentage={setPercentage}
+            setCustomInput={setCustomInput}
+            value={0.05}
+            text="5%"
+          />
+          <TipButton
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+            setPercentage={setPercentage}
+            setCustomInput={setCustomInput}
+            value={0.1}
+            text="10%"
+          />
+          <TipButton
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+            setPercentage={setPercentage}
+            setCustomInput={setCustomInput}
+            value={0.15}
+            text="15%"
+          />
+          <TipButton
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+            setPercentage={setPercentage}
+            setCustomInput={setCustomInput}
+            value={0.25}
+            text="25%"
+          />
+          <TipButton
+            activeButton={activeButton}
+            setActiveButton={setActiveButton}
+            setPercentage={setPercentage}
+            setCustomInput={setCustomInput}
+            value={0.5}
+            text="50%"
+          />
+          <TipInput
+            type="number"
+            placeholder="Custom"
+            value={customInput}
+            onChange={handleCustomInput}
+          />
+        </TipContainer>
+      </label>
       <PeopleContainer>
         <label>Number of People
           <PeopleInput
             type="number"
             placeholder="0"
-            value={people ? people : null}
+            value={people ? people : ""}
             onChange={({ target }) => setPeople(+target.value)}
           />
         </label>
       </PeopleContainer>
-    </InputsContainer>
+    </InputsContainer >
   )
 };
 
