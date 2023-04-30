@@ -7,7 +7,7 @@ import {
   Label,
   Value,
   ResetButton
-} from '../styled/Result.styled.js';
+} from '../styles/Result.styled.js';
 
 function Result(props) {
   const { tipAmount,

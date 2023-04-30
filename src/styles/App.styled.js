@@ -23,7 +23,6 @@ export const AppContainer = styled.section`
   grid-template-columns: 50% 50%;
   width: 65%;
   max-width: 900px;
-  /* margin: auto; */
   border-radius: 10px;
   background-color: #fff;
   
@@ -33,12 +32,10 @@ export const AppContainer = styled.section`
   }
 
   @media all and (min-width: 768px) {
-    /* grid-template-columns: 100%; */
     width: 85%;
   }
   
   @media all and (min-width: 1024px) {
-    /* grid-template-columns: 100%; */
     width: 65%;
   }
 

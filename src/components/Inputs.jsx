@@ -9,7 +9,7 @@ import {
   TipInput,
   PeopleContainer,
   PeopleInput,
-} from '../styled/Inputs.styled';
+} from '../styles/Inputs.styled';
 
 function Inputs(props) {
   const {

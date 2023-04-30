@@ -1,55 +1,8 @@
 import React, { useState } from 'react';
-import { createGlobalStyle } from 'styled-components';
 import Inputs from './components/Inputs';
 import Result from './components/Result';
-import { Main, Title, AppContainer } from './styled/App.styled.js';
-import './App.css';
-
-const GlobalStyles = createGlobalStyle`
-  html {
-    --color-primary: #00494d;
-    --color-secondary: #c5e4e7;
-    --color-display: #26c0ab;
-    --color-light: #f4fafa;
-  }
-
-  body {
-    font-family: 'Space Mono', monospace;
-    background-color: var(--color-secondary);
-  }
-
-  button:hover {
-    cursor: pointer;
-  }
-
-  span,
-  label {
-    font-size: 0.8rem;
-  }
-
-  input {
-    font-family: 'Space Mono', monospace;
-    color: var(--color-primary);
-    text-align: right;
-    padding: 0.4rem;
-    padding-right: 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 3px;
-    background-color: var(--color-light);
-    border: none;
-  }
-
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-  input[type=number]{
-    -moz-appearance: textfield;
-}
-`;
+import { Main, Title, AppContainer } from './styles/App.styled.js';
+import { GlobalStyles } from './styles/GlobalStyles';
 
 function App() {
   const [bill, setBill] = useState("");
