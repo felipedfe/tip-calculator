@@ -1,7 +1,8 @@
 import React from 'react';
 import StyledTipButton from '../styles/TipButton.styled';
+import { ITipButton } from '../interfaces';
 
-function TipButton(props) {
+function TipButton(props: ITipButton) {
   const {
     setPercentage,
     activeButton,
@@ -11,8 +12,9 @@ function TipButton(props) {
     setCustomInput
   } = props;
 
-  const handleClick = ({ target }) => {
-    setPercentage(+target.value);
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.target as HTMLButtonElement;
+    setPercentage(target.value);
     setActiveButton(text);
     setCustomInput("");
   };

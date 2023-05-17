@@ -45,6 +45,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "@types/styled-components": "^5.1.26",
+    "gh-pages": "^5.0.0",
+    "preact-svg-loader": "^0.2.1"
   }
 }

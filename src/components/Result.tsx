@@ -7,9 +7,10 @@ import {
   Label,
   Value,
   ResetButton
-} from '../styles/Result.styled.js';
+} from '../styles/Result.styled';
+import { IResult } from '../interfaces/index.js';
 
-function Result(props) {
+function Result(props: IResult) {
   const { tipAmount,
     total,
     setBill,
@@ -19,10 +20,10 @@ function Result(props) {
     setCustomInput } = props;
 
   const handleClick = () => {
-    setBill(0);
-    setActiveButton(0);
-    setPeople(0);
-    setPercentage(0);
+    setBill("");
+    setActiveButton("");
+    setPeople("");
+    setPercentage("");
     setCustomInput("");
   };
 

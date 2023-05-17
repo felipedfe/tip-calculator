@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledTipButton = styled.button`
+const StyledTipButton = styled.button<{ active: string, text: string }>`
   color: ${(props) => props.active === props.text ?
     'var(--color-primary)' :
     '#fff'

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Inputs from './components/Inputs';
 import Result from './components/Result';
-import { Main, Title, AppContainer } from './styles/App.styled.js';
+import { Main, Title, AppContainer } from './styles/App.styled';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     <>
       <GlobalStyles />
       <Main>
-        <Title>SPLITER</Title>
+        <Title>SPLITTER</Title>
         <AppContainer>
           <Inputs
             bill={bill}

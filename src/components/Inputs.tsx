@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import TipButton from './TipButton';
+import TipButtons from './TipButtons';
 import {
   InputsContainer,
   BillContainer,
@@ -10,8 +10,9 @@ import {
   PeopleContainer,
   PeopleInput,
 } from '../styles/Inputs.styled';
+import { IInputs } from '../interfaces';
 
-function Inputs(props) {
+function Inputs(props: IInputs) {
   const {
     bill,
     setBill,
@@ -27,17 +28,19 @@ function Inputs(props) {
     setTotal,
   } = props;
 
-  const handleCustomInput = ({ target }) => {
-    setPercentage(+target.value / 100);
+  const handleCustomInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { target } = e;
+    const parsedValue = (+target.value) / 100;
+    setPercentage(String(parsedValue));
     setActiveButton("");
     setCustomInput(target.value);
   };
 
   useEffect(() => {
-    const inputsValidation = () => {
+    const inputsValidation = (): void => {
       if (bill && percentage && people) {
-        const currentTipAmount = (bill * percentage) / people;
-        const currentTotal = (bill / people) + currentTipAmount;
+        const currentTipAmount = (+bill * +percentage) / +people;
+        const currentTotal = (+bill / +people) + currentTipAmount;
 
         setTipAmount(currentTipAmount);
         setTotal(currentTotal);
@@ -50,10 +53,6 @@ function Inputs(props) {
     inputsValidation();
   }, [bill, percentage, people, setTipAmount, setTotal]);
 
-  console.log('bill: ', bill);
-  console.log('percentage: ', percentage);
-  console.log('people: ', people);
-  console.log("activeBtn--->", activeButton);
   return (
     <InputsContainer>
       <BillContainer>
@@ -62,52 +61,18 @@ function Inputs(props) {
             type="number"
             placeholder="0"
             value={bill ? bill : ""}
-            onChange={({ target }) => setBill(+target.value)}
+            onChange={(e) => setBill(e.target.value)}
           />
         </label>
       </BillContainer>
       <TipContainer>
         <span>Select Tip %</span>
         <TipGrid>
-          <TipButton
+          <TipButtons
             activeButton={activeButton}
             setActiveButton={setActiveButton}
             setPercentage={setPercentage}
             setCustomInput={setCustomInput}
-            value={0.05}
-            text="5%"
-          />
-          <TipButton
-            activeButton={activeButton}
-            setActiveButton={setActiveButton}
-            setPercentage={setPercentage}
-            setCustomInput={setCustomInput}
-            value={0.1}
-            text="10%"
-          />
-          <TipButton
-            activeButton={activeButton}
-            setActiveButton={setActiveButton}
-            setPercentage={setPercentage}
-            setCustomInput={setCustomInput}
-            value={0.15}
-            text="15%"
-          />
-          <TipButton
-            activeButton={activeButton}
-            setActiveButton={setActiveButton}
-            setPercentage={setPercentage}
-            setCustomInput={setCustomInput}
-            value={0.25}
-            text="25%"
-          />
-          <TipButton
-            activeButton={activeButton}
-            setActiveButton={setActiveButton}
-            setPercentage={setPercentage}
-            setCustomInput={setCustomInput}
-            value={0.5}
-            text="50%"
           />
           <TipInput
             type="number"
@@ -123,7 +88,7 @@ function Inputs(props) {
             type="number"
             placeholder="0"
             value={people ? people : ""}
-            onChange={({ target }) => setPeople(+target.value)}
+            onChange={(e) => setPeople(e.target.value)}
           />
         </label>
       </PeopleContainer>
