@@ -14,7 +14,11 @@ export const Main = styled.main`
 
 export const Title = styled.h1`
   text-align: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
+  width: 100px;
+  word-break: break-all;
+  letter-spacing: 3px;
+  line-height: 1.3;
   color: var(--color-primary);
 `
 
