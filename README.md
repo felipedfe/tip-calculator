@@ -8,7 +8,7 @@ A challenge from the Frontend Mentor website (https://www.frontendmentor.io/chal
 It was the first application I made using styled components and it took me a while to get used to it. Even knowing CSS properties, the way we access and share them with other elements is quite different from working with css files. I believe I will practice with styled components again to improve myself!
 
 ## •Technologies and Libraries
-- Javascript
+- TypeScript
 - HTML
 - CSS
 - React
